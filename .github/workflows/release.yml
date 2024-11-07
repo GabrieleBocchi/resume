@@ -1,9 +1,9 @@
-name: Build and Release Resume PDF
+name: Release
 
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "v*-*-*"
 
 jobs:
   build_and_release:
