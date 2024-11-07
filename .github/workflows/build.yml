@@ -1,0 +1,19 @@
+name: Build and Release Resume PDF
+
+on: [push]
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        run: xelatex -pdf -f -interaction=nonstopmode -outdir=build -jobname=gabriele_bocchi_resume resume.tex

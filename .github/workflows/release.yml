@@ -1,0 +1,23 @@
+name: Build and Release Resume PDF
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        run: xelatex -pdf -f -interaction=nonstopmode -outdir=build -jobname=gabriele_bocchi_resume resume.tex
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./build/gabriele_bocchi_resume.pdf
