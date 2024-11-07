@@ -15,9 +15,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Compile LaTeX document
-        run: xelatex -pdf -f -interaction=nonstopmode -outdir=build -jobname=gabriele_bocchi_resume resume.tex
+        run: make
 
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: ./build/gabriele_bocchi_resume.pdf
+          files: gabriele_bocchi_resume.pdf
