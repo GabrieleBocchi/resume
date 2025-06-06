@@ -1,6 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    ":automergeStableNonMajor",
+    "config:recommended",
+    "group:allNonMajor",
+    "group:recommended",
+    "security:openssf-scorecard"
   ]
 }
