@@ -8,7 +8,7 @@ on:
 jobs:
   build_and_release:
     runs-on: ubuntu-latest
-    container: texlive/texlive:latest@sha256:f0bc49733665c09378b8ec0aca40e3263211bd208c9ecb7dfcce4967f234cf49
+    container: texlive/texlive:latest@sha256:2895fb163c63e5e0276a543b1ca89884cce86cb004b1c5e6b061f5c82709bd73
 
     steps:
       - name: Check out the repository
