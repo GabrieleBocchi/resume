@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=https://github.com/rendercv/rendercv/blob/main/schema.json?raw=true
+
+settings:
+  current_date: today
+  pdf_title: Gabriele Bocchi - Resume
+  render_command:
+    design: design.yaml
+    locale: locale.yaml
+    typst_path: rendercv_output/gabriele_bocchi_resume.typ
+    pdf_path: rendercv_output/gabriele_bocchi_resume.pdf
+    markdown_path: rendercv_output/gabriele_bocchi_resume.md
+    html_path: rendercv_output/gabriele_bocchi_resume.html
+    png_path: rendercv_output/gabriele_boaaaaaaacchi_resume.png
+
+cv:
+  name: Gabriele Bocchi
+  headline: Software Engineer
+  location: Italy
+  email: gabrielebocchi02@gmail.com
+  phone: "+393922044393"
+  social_networks:
+    - network: LinkedIn
+      username: gabrielebocchi
+    - network: GitHub
+      username: GabrieleBocchi
+
+  sections:
+    experience:
+      - company: Würth IT Italy
+        position: Software Engineer
+        location: Bozen, Italy
+        start_date: 2024-03
+        end_date: present
+        highlights:
+          - Oversees the maintenance of the product’s **user guide** and coordinates related documentation activities.
+          - Integrated **KeyCloak** into the company’s core product, enabling Single Sign-On for hundreds of client companies.
+          - Integrated **MariaDB Galera** into the company’s core product, providing a robust and highly available database solution.
+      - company: Würth IT Italy
+        position: DevOps Intern
+        location: Bozen, Italy
+        start_date: 2023-09
+        end_date: 2023-10
+        highlights:
+          - Reduced installation and update times by **70%** by rewriting scripts in **Ansible**, optimizing the automation process and improving deployment efficiency.
+
+    education:
+      - institution: University of Trento
+        area: Computer Science
+        degree: BS
+        location: Trento, Italy
+        start_date: 2021-09
+        end_date: 2024-07
+        highlights:
+          - "Main Courses: Algorithms and Data Structures, Databases, Programming 1, Programming 2, Networks, Introduction to Computer and Network Security, Formal Languages and Compilers, Software Engineering, Operating Systems."
+
+    projects:
+      - name: Configurator
+        summary: Webhook-driven Ansible deployer for GitOps automation.
+        location: "[GitHub Repository](https://github.com/GabrieleBocchi/configurator)"
+
+    honors_and_awards:
+      - name: 4th Place, START Hack Hackathon
+        date: 2025
+        location: St. Gallen, Switzerland
+        highlights:
+          - Secured 4th place in a highly selective European hackathon with more than 600 participants, developing and pitching an innovative solution within 36 hours.
+      - name: Silver Prize, CyberChallenge.IT CTF Attack&Defense National Final
+        date: 2023
+        location: Turin, Italy
+        highlights:
+          - Completed a highly selective national cybersecurity program focused on Cryptography, Reverse Engineering, Binary Exploitation, and Web Security, with only 20 spots available out of more than 120 applicants.
+          - Chosen as one of six students to represent the University of Trento in a national attack-defense competition, achieving 2nd place among 43 universities.
+
+    extracurricular_activities:
+      - company: Reply
+        position: Student Ambassador
+        location: Trento, Italy
+        start_date: 2021-09
+        end_date: 2023-10
+        highlights:
+          - Acted as a Student Ambassador for Reply, enhancing brand presence and connecting students with industry insights.
+
+    skills:
+      - label: General
+        details: Cyber Security, Problem Solving, Team Working, Linux, DevOps
+      - label: Programming
+        details: Rust, Python, C, C++, Bash, SQL, Assembly
+      - label: Tools
+        details: Git, Docker, Ansible, OpenShift, Vim, Jenkins
+      - label: Languages
+        details: Italian, English

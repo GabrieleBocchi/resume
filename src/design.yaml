@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://github.com/rendercv/rendercv/blob/main/schema.json?raw=true
+
+design:
+  theme: classic
+  page:
+    size: a4
+    show_footer: false
+    show_top_note: true
+  header:
+    connections:
+      phone_number_format: international
+      hyperlink: true
+      show_icons: true
+      display_urls_instead_of_usernames: false
+      separator: ""
+      space_between_connections: 0.5cm
+  sections:
+    show_time_spans_in: []

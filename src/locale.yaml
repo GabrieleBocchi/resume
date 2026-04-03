@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=https://github.com/rendercv/rendercv/blob/main/schema.json?raw=true
+
+locale:
+  language: english

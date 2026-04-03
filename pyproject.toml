@@ -1,0 +1,7 @@
+[project]
+name = "resume"
+dynamic = ["version"]
+description = "My resume, generated with RenderCV."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["rendercv[full]==2.8"]
