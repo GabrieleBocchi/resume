@@ -3,11 +3,14 @@ name: CI
 on:
   push:
 
+permissions:
+  contents: write
+
 jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repository
+      - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Run pre-commit checks
@@ -24,7 +27,13 @@ jobs:
           uv sync --frozen
 
       - name: Render resume
-        run: uv run rendercv render src/cv.yaml --dont-generate-html --dont-generate-markdown --dont-generate-png
+        run: |
+          uv run \
+            rendercv render \
+              src/cv.yaml \
+              --dont-generate-html \
+              --dont-generate-markdown \
+              --dont-generate-png
 
       - name: Create artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
